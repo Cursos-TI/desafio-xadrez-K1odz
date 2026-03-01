@@ -50,6 +50,34 @@ int main(void)
         contador_rainha++;
     } while (contador_rainha <= casas_rainha);
 
+    printf("\n");
+
+    /* ========== CAVALO: Movimento em L com LOOPS ANINHADOS ==========
+       O Cavalo move-se em forma de L: duas casas em uma direcao e uma
+       casa perpendicularmente. Simularemos seu movimento (2 casas para
+       baixo e 1 casa para esquerda) utilizando loops aninhados:
+       - Loop FOR externo: controla o movimento para BAIXO (2 casas)
+       - Loop WHILE interno: controla o movimento para ESQUERDA (1 casa)
+    */
+    printf("CAVALO - Movimento em L (2 casas BAIXO, 1 casa ESQUERDA):\n");
+    int casas_baixo_cavalo = 2;
+    int casas_esquerda_cavalo = 1;
+    int passo_cavalo = 1;
+
+    /* Loop FOR externo: para as 2 casas para baixo */
+    for (int i = 1; i <= casas_baixo_cavalo; i++) {
+        printf("Passo %d: Baixo\n", passo_cavalo);
+        passo_cavalo++;
+    }
+
+    /* Loop WHILE interno: para 1 casa para esquerda */
+    int contador_esquerda = 1;
+    while (contador_esquerda <= casas_esquerda_cavalo) {
+        printf("Passo %d: Esquerda\n", passo_cavalo);
+        passo_cavalo++;
+        contador_esquerda++;
+    }
+
     printf("\n=== FIM DA SIMULACAO ===\n");
 
     return 0;
